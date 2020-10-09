@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>C�lculo Rotas Google Maps</title>
+<title>Cálculo Rotas Google Maps</title>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<h1>C�lculo Rotas Google Maps</h1>
+<div id="app">
+<h1>Cálculo Rotas Google Maps</h1>
 <main>
 <fieldset>
 <label>Origem: </label>
-<input type="text" id="origem" value="Paraopeba, MG"/>
+<input type="text" placeholder="Ex:São Paulo, SP" value="São Paulo, SP" id="origem"/>
 <label>Destino: </label>
-<input type="text" id="destino" value="Curvelo, MG"/>
-<button>Calcular dist�ncia</button>
+<input type="text" placeholder="Ex:Belo Horizonte, MG" value="Belo Horizonte, MG" id="destino"/>
+<label>Tipo de Transporte:</label>
+<select id="travel">
+<option value="publico">Transporte Público</option>
+<option value="carro">Carro</option>
+<option value="ape">A Pé</option>
+</select>
+<label>Valor KM: </label>
+<input type="text" placeholder="1.20" value="1.20" id="km"/>
+<button>Calcular distância</button>
 </fieldset>
 </main>
 <span id="resultado"></span>
+</div>
 <script src="calculo.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=#CHAVE_API"></script>
-</body>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=CHAVE-API"></script></body>
 </html>
